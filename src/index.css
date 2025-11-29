@@ -1,0 +1,18 @@
+@import "./styles/profile.css";
+
+:root {
+  --asb-bg: #FFFFFF;
+  --asb-surface: #F6F8FC;
+  --asb-text: #0A0A0A;
+  --asb-muted: #4B5563;
+  --asb-blue-800: #1E3A8A;
+  --asb-blue-600: #2563EB;
+  --asb-footer: #0B2A4A;
+  --asb-border: #E5E7EB;
+}
+
+/* Utility (optional) */
+.section { padding-top: 3rem; padding-bottom: 3rem; }
+.section h2 { margin-top: 0; margin-bottom: 1rem; }
+
+.modal-open { overflow: hidden; }

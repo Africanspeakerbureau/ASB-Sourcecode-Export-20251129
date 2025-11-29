@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Primary -->
+    <title>Authentic African Voices — African Speakers Bureau</title>
+    <meta name="description" content="We connect global audiences with Africa’s most compelling voices. Book world-class speakers." />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://africanspeakerbureau.com/" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://res.cloudinary.com" />
+    <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://africanspeakerbureau.com/" />
+    <meta property="og:title" content="Authentic African Voices — African Speakers Bureau" />
+    <meta property="og:description" content="We connect global audiences with Africa’s most compelling voices. Book world-class speakers." />
+    <meta property="og:image" content="https://res.cloudinary.com/dimtwmk1v/image/upload/f_jpg,q_auto:good,w_1200,h_630,c_fill,g_auto/v1755020653/ChatGPT_Image_Aug_12_2025_07_22_43_PM_p9kj8z.png" />
+    <meta property="og:image:secure_url" content="https://res.cloudinary.com/dimtwmk1v/image/upload/f_jpg,q_auto:good,w_1200,h_630,c_fill,g_auto/v1755020653/ChatGPT_Image_Aug_12_2025_07_22_43_PM_p9kj8z.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Authentic African Voices — African Speakers Bureau" />
+    <meta name="twitter:description" content="We connect global audiences with Africa’s most compelling voices. Book world-class speakers." />
+    <meta name="twitter:image" content="https://res.cloudinary.com/dimtwmk1v/image/upload/f_jpg,q_auto:good,w_1200,h_630,c_fill,g_auto/v1755020653/ChatGPT_Image_Aug_12_2025_07_22_43_PM_p9kj8z.png" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/dimtwmk1v/image/upload/f_png,w_32,h_32,c_fit/v1755020663/Screenshot_2025-08-12_at_18.10.08_elr5wx.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/dimtwmk1v/image/upload/f_png,w_180,h_180,c_fit/v1755020663/Screenshot_2025-08-12_at_18.10.08_elr5wx.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="https://res.cloudinary.com/dimtwmk1v/image/upload/f_png,w_192,h_192,c_fit/v1755020663/Screenshot_2025-08-12_at_18.10.08_elr5wx.png" />
+    <meta name="theme-color" content="#113281" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C8XNFM5RGH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'G-C8XNFM5RGH', {
+        send_page_view: false,
+      })
+    </script>
+
+    <!-- Vercel Speed Insights -->
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <script
+      src="https://upload-widget.cloudinary.com/global/all.js"
+      type="text/javascript"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Normalize Supabase magic-link URLs for HashRouter -->
+    <script>
+      (function () {
+        // If Supabase returned tokens as the first hash (e.g. /#access_token=…)
+        var h = window.location.hash || "";
+        if (h.startsWith("#access_token=") || h.startsWith("#id_token=") || h.startsWith("#refresh_token=")) {
+          // Move the token params into a query string *after* the router path
+          // Result: /#/speaker-callback?access_token=…&refresh_token=…
+          var params = h.slice(1); // remove the '#'
+          var target = window.location.origin + "/#"
+            + "/speaker-callback?" + params;
+          window.location.replace(target);
+          return;
+        }
+
+        // If we *do* have the route but Supabase added a second '#'
+        // Example: /#/speaker-callback#access_token=…
+        if (h.includes("speaker-callback#access_token=")) {
+          var parts = h.split("#");
+          // parts[0] => "/speaker-callback"
+          // parts[1] => "access_token=…&refresh_token=…"
+          var params2 = parts[1];
+          var target2 = window.location.origin + "/#"
+            + parts[0] + "?" + params2;
+          window.location.replace(target2);
+          return;
+        }
+      })();
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+    <!-- CKEditor 5 Classic Build (CDN) -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js" defer></script>
+    <!-- Sanitizer for extra safety when saving HTML -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js" defer></script>
+  </body>
+</html>
